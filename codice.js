@@ -5,7 +5,7 @@ function palindromo(testo) {
         let carattere1 = testo[indice1];
         let carattere2 = testo[indice2];
         if (carattere1 !== carattere2) {
-        return false;
+            return false;
         }
     }
     return true;
