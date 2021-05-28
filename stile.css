@@ -1,10 +1,10 @@
-#parola {
+#testo {
     width: 300px;
     height: 100px;
     resize: none;
 }
 
-#parola, #controlla {
+#testo, #controlla {
     display: block;
 }
 
@@ -19,4 +19,8 @@
 
 #controlla:active {
     background-color: darkblue;
+}
+
+#risultato {
+    margin-top: 25px;
 }
