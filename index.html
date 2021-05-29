@@ -6,11 +6,17 @@
         <link rel="stylesheet" type="text/css" href="stile.css">
     </head>
     <body>
-        <h1>Palindromo o no?</h1>
-
-        <textarea id="testo"></textarea>
-        <button id="controlla">Controlla</button>
-        <div id="risultato"></div>
+        <div class="centrato">
+            <h1>Palindromo o no?</h1>
+            <textarea id="testo"></textarea>
+            <div class="controlli">
+                <button class="pulsante pulsante-blu" id="controlla">Controlla</button>
+                <input type="checkbox" checked id="ignoraSpaziEMaiuscole">
+                <label for="ignoraSpaziEMaiuscole">Ignora spazi e maiuscole</label>
+                <button class="pulsante pulsante-grigio" id="testoRandom">?</button>
+            </div>
+            <div id="risultato"></div>
+        </div>
         <script src="codice.js" type="text/javascript"></script>
     </body>
 </html>
