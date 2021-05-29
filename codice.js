@@ -1,6 +1,17 @@
 function palindromo(testo, ignoraSpaziEMaiuscole = true) {
     if (ignoraSpaziEMaiuscole) {
-        testo = testo.toLowerCase().replaceAll(' ', '').replaceAll('\n', '');
+        testo = testo
+        .toLowerCase()
+        .replaceAll(' ', '')
+        .replaceAll('\n', '')
+        .replaceAll('?', '')
+        .replaceAll(',', '')
+        .replaceAll(':', '')
+        .replaceAll('!', '')
+        .replaceAll('\'', '')
+
+
+
     }
     let termineMedio = testo.length / 2;
     for (let indice1 = 0; indice1 < termineMedio; indice1++) {
@@ -17,8 +28,26 @@ function palindromo(testo, ignoraSpaziEMaiuscole = true) {
 function inizializzaPagina() {
     let palindrome = [
         'I topi non avevano nipoti',
-        'Anna',
-        'aveva',
+        'E le tazzine, igienizzatele!',
+        'Angela lava la legna',
+        'Erano usi suonare',
+        'Ero Muro o Rumore?',
+        'Ai clacson nonno scalcia',
+        'I bar arabi',
+        'I due feudi',
+        'E le mie sei mele?',
+        'A vita nella valle nativa',
+        'I tre sedili deserti',
+        'Amo ridere di Roma',
+        'Ero tutelata da tale tutore',
+        'Omino nano non anonimo',
+        'O mordo tua nuora, o aro un autodromo',
+        'Era matto: radeva fave da rottamare!',
+        'I tropici, mamma! Mi ci porti?',
+        'Arava, l\'avara',
+        'Poter essere pelato totale per essere top',
+        'Accesa pipa secca',
+        'In girum imus nocte et consumimur igni'
     ];
 
     let pulsanteControlla = document.getElementById('controlla');
@@ -29,11 +58,11 @@ function inizializzaPagina() {
     
     pulsanteControlla.addEventListener('click', function() {
         if (testo.value.trim() === '') {
-            risultato.innerText = 'non hai scritto niente!';
+            risultato.innerHTML = `<i>non hai scritto niente!</i>`;
         } else if (palindromo(testo.value, ignoraSpaziEMaiuscole.checked)) {
-            risultato.innerText = testo.value + ' è palindromo';
+            risultato.innerHTML = `<b>${testo.value}</b> è palindromo`;
         } else {
-            risultato.innerText = testo.value + ' non è palindromo';
+            risultato.innerHTML = `<b>${testo.value}</b> non è palindromo`;
         }
     });
 
